@@ -10,6 +10,7 @@ namespace TheftShot
     {
         static void Main(string[] args)
         {
+            var camera = new Camera();
         }
     }
 }
