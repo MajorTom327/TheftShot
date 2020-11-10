@@ -10,6 +10,8 @@ using AForge.Video.DirectShow;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Threading;
+using System.IO;
+using System.Globalization;
 
 namespace TheftShot
 {
@@ -17,9 +19,17 @@ namespace TheftShot
     {
         static FilterInfoCollection DevicesCollection;
         static VideoCaptureDevice Device;
+        private const string BaseDir = @"C:\Temp\TheftShot\";
         public Camera()
         {
-            GetCameraList();
+            if (Device == null)
+                GetCameraList();
+        }
+
+        public void CreateStockageDir()
+        {
+
+            (new FileInfo(BaseDir)).Directory.Create();
         }
 
         public void GetCameraList()
@@ -33,9 +43,11 @@ namespace TheftShot
         static void Device_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Image img = (Bitmap)eventArgs.Frame.Clone();
-            string fileName = "Image";
+            string fileName = "Image" + DateTime.Now.ToString("s", DateTimeFormatInfo.InvariantInfo);
+            fileName = fileName.Replace(" ", "_").Replace(":","_");
             fileName = fileName + ".jpg";
-            img.Save(@"C:\Temp\TheftShot" + fileName);
+            var combinedPath = Path.Combine(BaseDir, fileName);
+            img.Save(combinedPath);
             Device.SignalToStop();
         }
 
