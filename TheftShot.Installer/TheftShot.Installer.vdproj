@@ -137,6 +137,20 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_5BB9F72D8E734F2C94E3F301507789B7"
+            {
+            "Name" = "8:Sortie principale from TheftShot (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_653D0305538F44B6BC817784C715E3AD"
+            "FileType" = "3:2"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:uninstall"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_3F17E436_7E1A_436C_AB65_9AE28B159BC6"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8EEA6EC28D1647F3923EEE4EAFA12BF3"
             {
             "Name" = "8:Sortie principale from TheftShot (Active)"
@@ -386,7 +400,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TheftShot"
         "ProductCode" = "8:{E4358405-45AC-474D-BD19-416ED0C3D650}"
-        "PackageCode" = "8:{57F3E6E6-5C97-49C2-A058-7CC2C37DE74A}"
+        "PackageCode" = "8:{04B5CA18-FB71-4ACD-B983-E4526BFF7453}"
         "UpgradeCode" = "8:{281A4ED0-06BF-4C00-9CC3-6FB246ED2C01}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
@@ -907,7 +921,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_653D0305538F44B6BC817784C715E3AD"
             {
-            "SourcePath" = "8:..\\TheftShot\\obj\\Debug\\TheftShot.exe"
+            "SourcePath" = "8:..\\TheftShot\\obj\\Release\\TheftShot.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_B3458CF32E124740BAC0AC772D523D25"
