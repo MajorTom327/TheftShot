@@ -14,11 +14,17 @@ namespace TheftShot
             this.camera = new TSCamera();
             Console.WriteLine("TheftShotService created");
 
-            System.IO.File.WriteAllText(_filePath, $"Session start: {DateTime.Now.ToString("s")}");
+            using (var f = System.IO.File.AppendText(_filePath))
+            {
+                f.WriteLine($"Session start: {DateTime.Now.ToString("s")}");
+            }
             this.camera.TakePicture();
         }
         public void Stop() {
-            System.IO.File.WriteAllText(_filePath, $"Session start: {DateTime.Now.ToString("s")}");
+            using (var f = System.IO.File.AppendText(_filePath))
+            {
+                f.WriteLine($"Session close: {DateTime.Now.ToString("s")}");
+            }
         }
     }
 }
