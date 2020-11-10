@@ -1,4 +1,5 @@
-﻿using Topshelf;
+﻿using System;
+using Topshelf;
 
 namespace TheftShot
 {
@@ -8,9 +9,9 @@ namespace TheftShot
         {
             var rc = HostFactory.Run(x =>
             {
-                x.Service<TownCrier>(s =>
+                x.Service<TSService>(s =>
                 {
-                    s.ConstructUsing(name => new TheftShotService());
+                    s.ConstructUsing(name => new TSService());
                     s.WhenStarted(ts => ts.Start());
                     s.WhenStopped(ts => ts.Stop());
                 });
@@ -24,7 +25,7 @@ namespace TheftShot
             var exitCode = (int)Convert.ChangeType(rc, rc.GetTypeCode());
             Environment.ExitCode = exitCode;
 
-            var camera = new Camera();
+            var camera = new TSCamera();
         }
     }
 }

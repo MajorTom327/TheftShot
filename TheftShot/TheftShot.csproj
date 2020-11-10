@@ -58,10 +58,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Camera.cs" />
+    <Compile Include="TSCamera.cs" />
+    <Compile Include="TSConstants.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TheftShotService.cs" />
+    <Compile Include="TSService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
