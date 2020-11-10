@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Topshelf;
 
 namespace TheftShot
 {
@@ -10,6 +6,24 @@ namespace TheftShot
     {
         static void Main(string[] args)
         {
+            var rc = HostFactory.Run(x =>
+            {
+                x.Service<TownCrier>(s =>
+                {
+                    s.ConstructUsing(name => new TheftShotService());
+                    s.WhenStarted(ts => ts.Start());
+                    s.WhenStopped(ts => ts.Stop());
+                });
+                x.RunAsLocalSystem();
+
+                x.SetDescription("TheftShot Service");
+                x.SetDisplayName("TheftShot");
+                x.SetServiceName("TheftShot");
+            });
+
+            var exitCode = (int)Convert.ChangeType(rc, rc.GetTypeCode());
+            Environment.ExitCode = exitCode;
+
             var camera = new Camera();
         }
     }

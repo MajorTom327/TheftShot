@@ -28,7 +28,6 @@ namespace TheftShot
 
         public void CreateStockageDir()
         {
-
             (new FileInfo(BaseDir)).Directory.Create();
         }
 
