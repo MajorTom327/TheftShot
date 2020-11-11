@@ -23,15 +23,10 @@ namespace TheftShot
         public TSCamera()
         {
             Console.WriteLine("Camera Created");
-            CreateStockageDir();
             GetCameraList();
             _frameEventHandler = new NewFrameEventHandler(Device_NewFrame);
         }
 
-        public void CreateStockageDir()
-        {
-            (new FileInfo(TSConstants.BaseDir)).Directory.Create();
-        }
 
         public void GetCameraList()
         {
