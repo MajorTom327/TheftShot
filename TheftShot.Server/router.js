@@ -32,7 +32,7 @@ module.exports = (app) => {
 
     app.use('/files', express.static(uploadPath));
 
-    app.post('/log', (req, res) => {
+    app.post('/events', (req, res) => {
         console.log(req.body);
         const event = R.pick(['type', 'date'], req.body);
 
@@ -42,7 +42,7 @@ module.exports = (app) => {
 
         res.json(event).end();
     });
-    app.get('/log', (req, res) => {
+    app.get('/events', (req, res) => {
         const events = db.get('events').value();
         res.json(events).end();
     })
