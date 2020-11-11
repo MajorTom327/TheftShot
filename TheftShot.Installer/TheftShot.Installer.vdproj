@@ -139,7 +139,7 @@
         {
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_5BB9F72D8E734F2C94E3F301507789B7"
             {
-            "Name" = "8:Sortie principale from TheftShot (Active)"
+            "Name" = "8:Uninstall Service"
             "Condition" = "8:"
             "Object" = "8:_653D0305538F44B6BC817784C715E3AD"
             "FileType" = "3:2"
@@ -153,7 +153,7 @@
             }
             "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_8EEA6EC28D1647F3923EEE4EAFA12BF3"
             {
-            "Name" = "8:Sortie principale from TheftShot (Active)"
+            "Name" = "8:Install Service"
             "Condition" = "8:"
             "Object" = "8:_653D0305538F44B6BC817784C715E3AD"
             "FileType" = "3:2"
@@ -162,6 +162,20 @@
             "EntryPoint" = "8:"
             "Sequence" = "3:1"
             "Identifier" = "8:_BDF27F39_329A_4455_B0C1_0EB5B4304AE6"
+            "InstallerClass" = "11:FALSE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_F251136EF0664864803B1A78239F5F23"
+            {
+            "Name" = "8:Run Service"
+            "Condition" = "8:"
+            "Object" = "8:_653D0305538F44B6BC817784C715E3AD"
+            "FileType" = "3:2"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:start"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:2"
+            "Identifier" = "8:_01398A84_64A7_40AE_BF06_240A9842A218"
             "InstallerClass" = "11:FALSE"
             "CustomActionData" = "8:"
             }
@@ -400,7 +414,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:TheftShot"
         "ProductCode" = "8:{E4358405-45AC-474D-BD19-416ED0C3D650}"
-        "PackageCode" = "8:{04B5CA18-FB71-4ACD-B983-E4526BFF7453}"
+        "PackageCode" = "8:{B83262F6-9BED-4B17-9487-8F07AEC76883}"
         "UpgradeCode" = "8:{281A4ED0-06BF-4C00-9CC3-6FB246ED2C01}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
