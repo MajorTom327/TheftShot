@@ -17,7 +17,8 @@ namespace TheftShot
                 });
                 x.RunAsLocalSystem();
 
-                x.StartAutomatically();
+                //x.StartAutomatically();
+                x.StartAutomaticallyDelayed();
 
                 x.SetDescription("TheftShot Service");
                 x.SetDisplayName("TheftShot");

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheftShot", "TheftShot\Thef
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "TheftShot.Installer", "TheftShot.Installer\TheftShot.Installer.vdproj", "{FB311FBC-19A3-4CDE-A8A0-9611DC8B20CA}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "TheftShot.Server", "TheftShot.Server\TheftShot.Server.njsproj", "{4FCB6417-8015-4792-BBB4-0EE171B9A6CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{CB6DCC8C-95F3-4EA2-9AF5-6AA1DA3EEAB9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FB311FBC-19A3-4CDE-A8A0-9611DC8B20CA}.Debug|Any CPU.ActiveCfg = Debug
 		{FB311FBC-19A3-4CDE-A8A0-9611DC8B20CA}.Release|Any CPU.ActiveCfg = Release
+		{4FCB6417-8015-4792-BBB4-0EE171B9A6CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FCB6417-8015-4792-BBB4-0EE171B9A6CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FCB6417-8015-4792-BBB4-0EE171B9A6CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FCB6417-8015-4792-BBB4-0EE171B9A6CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
