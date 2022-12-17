@@ -1,5 +1,9 @@
 # TheftShot
 
+> There is some security problems on the project. But tbh, I don't want to handle that.
+>
+> If you want to, feel free to do it.
+
 TheftShot is a basic project. It build a windows service and his installer.
 
 The TheftShot service do something very basic.
